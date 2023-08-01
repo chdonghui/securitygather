@@ -37,6 +37,39 @@
             <!-- home -->
             <section id="home">
                 <h1>Home</h1>
+                <p id="clock" style="color:black;">clock</p>
+                <script>
+                    var Target = document.getElementById("clock");
+                    function clock() {
+                        var time = new Date();
+            
+                        var month = time.getMonth();
+                        var date = time.getDate();
+                        var day = time.getDay();
+                        var week = ['일', '월', '화', '수', '목', '금', '토'];
+            
+                        var hours = time.getHours();
+                        var minutes = time.getMinutes();
+                        var seconds = time.getSeconds();
+            
+                        Target.innerText = 
+                        `${month + 1}월 ${date}일 ${week[day]}요일 ` +
+                        `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+                            
+                    }
+                    clock();
+                    setInterval(clock, 1000); // 1초마다 실행
+                </script>
+                <div>
+                    <h2>화이트햇 스쿨</h2>
+                    <p>
+                        서류접수: 2023.07.03(월) ~ 2023.08.01(화) 17시까지<br>
+                        <b>서류전형:</b> 2023.08.02(수) ~ 2023.08.04(금)<br>
+                        필기전형: 2023.08.08(화) ~ 2023.08.12(토) - 온라인<br>
+                        면접전형: 2023.08.16(수)<br>
+                        최종선발: 2023.08.21(월)<br>
+                    </p>
+                </div>
             </section>
             <hr>
             <!-- about -->
@@ -55,7 +88,8 @@
                     <p>
                         행사명: Black Hat USA 2023<br>
                         일정: 2023.08.09~2023.08.10(전문사이버보안교육 8/9~8/10)<br>
-                        장소[미국]:  Mandalay Bay Convention Center in Las Vegas<br>
+                        국가: USA<br>
+                        장소:  Mandalay Bay Convention Center in Las Vegas<br>
                         홈페이지: <a href="https://www.blackhat.com/us-23/" target="_blank">https://www.blackhat.com/us-23/</a><br>
                     </p>
                 </div>
@@ -64,7 +98,8 @@
                     <p>
                         행사명: 2023 코드게이트 국제해킹방어대회 & 글로벌 보안 컨퍼런스<br>
                         일정: 2023.08.24(목) ~ 2023.08.25(금)<br>
-                        장소[한국]: 서울, 코엑스 그랜드볼룸<br>
+                        국가: Korea<br>
+                        장소: 서울, 코엑스 그랜드볼룸<br>
                         주제: AI시대의 보안 패러다임<br>
                         사전등록: 2023.07.05(수) ~ 2023.08.11(금) / 현장등록: 2023.08.25(금)<br>
                         일반가격: 100,000(사전등록), 200,000(현장등록) / 학생가격: 30,000(사전등록), 60,000(현장등록)<br>
@@ -77,7 +112,8 @@
                     <p>
                         행사명: 제17회 국제 시큐리티 콘퍼런스<br>
                         일정: 2023.09.19(화) ~ 2023.09.20(수)<br>
-                        장소[한국]: 서울 코엑스 3층 Hall C, 콘퍼런스룸(남)<br>
+                        국가: Korea<br>
+                        장소: 서울 코엑스 3층 Hall C, 콘퍼런스룸(남)<br>
                         주제: Act Now!<br>
                         대상: 보안솔루션 기업 관계자, SI/총판/컨설팅 기업관계자, 학생의 경우 유료 사전등록만 가능<br>
                         가격: 220,000원(VAT 포함)<br>
@@ -89,7 +125,8 @@
                     <p>
                         행사명: RSA Conference Expo 2024<br>
                         일정: 미정<br>
-                        장소[미국]: 센프란시스코(정확한 장소 추후 업데이트)<br>
+                        국가: USA<br>
+                        장소: 센프란시스코(정확한 장소 추후 업데이트)<br>
                         홈페이지: <a href="https://www.rsaconference.com/usa" target="_blank">https://www.rsaconference.com/usa</a><br>
                     </p>
                 </div>
@@ -98,7 +135,8 @@
                     <p>
                         행사명: 제23회 세계 보안 엑스포(SECON 2024)<br>
                         일정: 2024.03.20(수) ~ 2024.03.22(금) (10:00 - 17:00)<br>
-                        장소[한국]: 일산킨텍스 제1전시장 3-5홀<br>
+                        국가: Korea<br>
+                        장소: 일산킨텍스 제1전시장 3-5홀<br>
                         홈페이지: <a href="https://www.seconexpo.com/kor/main.asp" target="_blank">https://www.seconexpo.com/kor/main.asp</a><br>
                     </p>
                 </div>
@@ -246,7 +284,8 @@
         <hr>
         <!-- Footer -->
         <footer id="contact">
-            SecurityGather는 사이버 보안과 관련된 정보를 통합적으로 제공하는 플랫폼입니다.
+            SecurityGather는 사이버 보안과 관련된 정보를 통합적으로 제공하는 플랫폼입니다.<br>
+            @securitygather
         </footer>
     </body>
 </html>
